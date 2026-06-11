@@ -81,8 +81,8 @@ export default function Home() {
             <nav className="mt-16 hidden lg:block">
               <ul className="space-y-6 text-sm font-medium uppercase tracking-[0.2em]">
                 <li>
-                  <a
-                    href="/#about"
+                  <button
+                    type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       document.getElementById('about')?.scrollIntoView({
@@ -96,12 +96,12 @@ export default function Home() {
                       className={`h-px transition-all duration-300 ${activeSection === 'about' ? 'w-16 bg-slate-100' : 'w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200'}`}
                     />
                     About
-                  </a>
+                  </button>
                 </li>
 
                 <li>
-                  <a
-                    href="/#projects"
+                  <button
+                    type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       document.getElementById('projects')?.scrollIntoView({
@@ -115,12 +115,12 @@ export default function Home() {
                       className={`h-px transition-all duration-300 ${activeSection === 'projects' ? 'w-16 bg-slate-100' : 'w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200'}`}
                     />
                     Projects
-                  </a>
+                  </button>
                 </li>
 
                 <li>
-                  <a
-                    href="/#contact"
+                  <button
+                    type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       document.getElementById('contact')?.scrollIntoView({
@@ -134,7 +134,7 @@ export default function Home() {
                       className={`h-px transition-all duration-300 ${activeSection === 'contact' ? 'w-16 bg-slate-100' : 'w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200'}`}
                     />
                     Contact
-                  </a>
+                  </button>
                 </li>
               </ul>
             </nav>
