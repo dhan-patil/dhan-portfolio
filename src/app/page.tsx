@@ -70,13 +70,6 @@ export default function Home() {
               analytics, iOS/macOS experiences, telemetry systems, and
               building data-driven applications with clean user experiences.
             </p>
-            <a
-              href="/Dhan_Patil_Resume.pdf"
-              target="_blank"
-              className="mt-6 inline-flex items-center rounded-full border border-slate-800 bg-slate-900/40 px-5 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-800/60 hover:text-slate-100"
-            >
-              Resume ↗
-            </a>
 
             <nav className="mt-16 hidden lg:block">
               <ul className="space-y-6 text-sm font-medium uppercase tracking-[0.2em]">
@@ -138,6 +131,13 @@ export default function Home() {
                 </li>
               </ul>
             </nav>
+            <a
+              href="/Dhan_Patil_Resume.pdf"
+              target="_blank"
+              className="mt-10 inline-flex items-center rounded-full border border-slate-800 bg-slate-900/40 px-5 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-800/60 hover:text-slate-100"
+            >
+              Resume ↗
+            </a>
           </div>
 
           <div className="mt-12 flex items-center gap-5 pb-10 text-slate-400 lg:pb-0">
