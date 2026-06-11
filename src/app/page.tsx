@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     if (window.location.hash) {
@@ -29,16 +30,34 @@ export default function Home() {
 
     sections.forEach((section) => observer.observe(section));
 
-    return () => observer.disconnect();
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
-    <main className="min-h-screen scroll-smooth bg-[#070B12] text-slate-200">
-      <div className="mx-auto flex max-w-7xl gap-16 px-6 lg:px-24">
+    <main className="relative min-h-screen overflow-hidden scroll-smooth bg-[#070B12] text-slate-200">
+      <div
+        className="pointer-events-none fixed inset-0 z-0 transition duration-300"
+        style={{
+          background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(64,99,216,0.12), transparent 80%)`,
+        }}
+      />
+      <div className="relative z-10 mx-auto flex max-w-7xl gap-16 px-6 lg:px-24">
         {/* Fixed Left Panel */}
-        <aside className="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+        <aside className="lg:fixed lg:top-0 lg:left-0 lg:flex lg:h-screen lg:w-[42%] lg:flex-col lg:justify-between lg:px-24 lg:py-24">
           <div>
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.25em] text-[#5FA8FF]">
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.25em] text-[#4063D8]">
               Hi, my name is
             </p>
 
@@ -64,6 +83,13 @@ export default function Home() {
                 <li>
                   <a
                     href="/#about"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('about')?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                      });
+                    }}
                     className={`group flex items-center gap-4 transition duration-300 ${activeSection === 'about' ? 'text-slate-100' : 'text-slate-500 hover:text-slate-200'}`}
                   >
                     <span
@@ -76,6 +102,13 @@ export default function Home() {
                 <li>
                   <a
                     href="/#projects"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('projects')?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                      });
+                    }}
                     className={`group flex items-center gap-4 transition duration-300 ${activeSection === 'projects' ? 'text-slate-100' : 'text-slate-500 hover:text-slate-200'}`}
                   >
                     <span
@@ -88,6 +121,13 @@ export default function Home() {
                 <li>
                   <a
                     href="/#contact"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('contact')?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                      });
+                    }}
                     className={`group flex items-center gap-4 transition duration-300 ${activeSection === 'contact' ? 'text-slate-100' : 'text-slate-500 hover:text-slate-200'}`}
                   >
                     <span
@@ -127,7 +167,7 @@ export default function Home() {
         </aside>
 
         {/* Scrollable Right Side */}
-        <section className="w-full py-24 lg:w-[52%]">
+        <section className="w-full py-24 lg:ml-[48%] lg:w-[52%]">
           <section id="about" className="mb-32 scroll-mt-24">
             <h3 className="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-slate-300 lg:hidden">
               About
@@ -161,13 +201,13 @@ export default function Home() {
               Projects
             </h3>
 
-            <div className="space-y-10">
+            <div className="space-y-6">
               <a
                 href="https://github.com/dhan-patil/f1a-formula1-analytics"
                 target="_blank"
-                className="group block rounded-2xl border border-transparent p-6 transition duration-300 hover:border-slate-800 hover:bg-slate-900/40"
+                className="group block rounded-3xl border border-slate-800/70 bg-slate-900/30 p-7 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-900/50"
               >
-                <h4 className="text-xl font-semibold text-slate-100 group-hover:text-[#5FA8FF]">
+                <h4 className="text-xl font-semibold text-slate-100 transition-colors duration-300 group-hover:text-[#4063D8]">
                   F1A
                 </h4>
                 <p className="mt-3 leading-7 text-slate-400">
@@ -184,9 +224,9 @@ export default function Home() {
               <a
                 href="https://github.com/dhan-patil/f1tl-ios"
                 target="_blank"
-                className="group block rounded-2xl border border-transparent p-6 transition duration-300 hover:border-slate-800 hover:bg-slate-900/40"
+                className="group block rounded-3xl border border-slate-800/70 bg-slate-900/30 p-7 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-900/50"
               >
-                <h4 className="text-xl font-semibold text-slate-100 group-hover:text-[#5FA8FF]">
+                <h4 className="text-xl font-semibold text-slate-100 transition-colors duration-300 group-hover:text-[#4063D8]">
                   F1TL
                 </h4>
                 <p className="mt-3 leading-7 text-slate-400">
@@ -201,9 +241,9 @@ export default function Home() {
               <a
                 href="https://github.com/dhan-patil/trackdelta-f1-telemetry"
                 target="_blank"
-                className="group block rounded-2xl border border-transparent p-6 transition duration-300 hover:border-slate-800 hover:bg-slate-900/40"
+                className="group block rounded-3xl border border-slate-800/70 bg-slate-900/30 p-7 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-900/50"
               >
-                <h4 className="text-xl font-semibold text-slate-100 group-hover:text-[#5FA8FF]">
+                <h4 className="text-xl font-semibold text-slate-100 transition-colors duration-300 group-hover:text-[#4063D8]">
                   TrackDelta
                 </h4>
                 <p className="mt-3 leading-7 text-slate-400">
@@ -218,8 +258,8 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="contact" className="min-h-[40vh] scroll-mt-24 pb-24">
-            <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">
+          <section id="contact" className="min-h-[50vh] scroll-mt-24 pb-24">
+            <h3 className="mb-8 text-lg font-bold uppercase tracking-[0.15em] text-slate-100">
               Contact
             </h3>
 
@@ -228,12 +268,18 @@ export default function Home() {
               or working together? Feel free to reach out.
             </p>
 
-            <a
-              href="mailto:pdhandd@gmail.com"
-              className="mt-6 inline-block text-lg font-medium text-[#5FA8FF] transition hover:text-slate-100"
-            >
-              pdhandd@gmail.com
-            </a>
+            <div className="mt-10">
+              <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
+                Email
+              </p>
+
+              <a
+                href="mailto:pdhandd@gmail.com"
+                className="mt-3 inline-block text-base font-medium text-slate-300 transition hover:text-[#4063D8]"
+              >
+                pdhandd@gmail.com
+              </a>
+            </div>
           </section>
         </section>
       </div>
