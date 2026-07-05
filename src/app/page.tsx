@@ -70,7 +70,7 @@ export default function Home() {
             </p>
 
             <p className="mt-6 max-w-md text-base leading-7 text-slate-400">
-              Building data pipelines, analytics solutions, and Formula 1 data platforms using Python, SQL, PostgreSQL, and REST APIs.
+              Building data pipelines, analytics solutions, and Formula 1 data platforms using Python, SQL, PostgreSQL, Tableau, Docker, and REST APIs.
             </p>
 
             <nav className="mt-16 hidden lg:block">
@@ -177,19 +177,16 @@ export default function Home() {
 
             <div className="space-y-6 text-slate-400 leading-8">
               <p className="max-w-2xl text-base leading-8 text-slate-300">
-                I'm a BCA graduate focused on Data Analytics and Data Engineering, building practical projects that transform raw data into meaningful insights.
+                I am a BCA graduate focused on Data Analytics and Data Engineering, building practical projects that transform raw data into meaningful insights.
               </p>
-
               <p>
-                My work centers around Python, SQL, PostgreSQL, REST APIs, and ETL pipelines. I enjoy designing databases, collecting data from APIs, transforming datasets, and creating analytical workflows.
+                My work centers around Python, SQL, PostgreSQL, REST APIs, ETL pipelines, Tableau, and Docker. I enjoy designing databases, collecting data from APIs, transforming datasets, building containerized applications, and creating analytical dashboards and workflows.
               </p>
-
               <p>
                 Formula 1 provides the perfect playground for applying these skills. My projects explore race strategy, telemetry, performance analysis, and historical racing data using modern data engineering practices.
               </p>
-
               <p>
-                I'm currently expanding my expertise in PostgreSQL, Power BI, advanced SQL, and scalable data pipelines while preparing for Data Analyst and Data Engineering opportunities.
+                I am currently expanding my expertise in PostgreSQL, Tableau, Docker, Power BI, advanced SQL, and scalable data pipelines while preparing for Data Analyst and Data Engineering opportunities.
               </p>
             </div>
           </section>
@@ -200,6 +197,22 @@ export default function Home() {
             </h3>
 
             <div className="space-y-6">
+              <a
+                href="https://github.com/dhan-patil/trackdelta-f1-telemetry"
+                target="_blank"
+                className="group block rounded-3xl border border-slate-800/70 bg-slate-900/30 p-7 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-900/50"
+              >
+                <h4 className="text-xl font-semibold text-slate-100 transition-colors duration-300 group-hover:text-[#4063D8]">
+                  TrackDelta
+                </h4>
+                <p className="mt-3 leading-7 text-slate-400">
+                  Python-based telemetry analysis project that processes Formula 1 lap data to compare drivers, evaluate performance, and generate race insights.
+                </p>
+                <p className="mt-4 text-sm text-slate-500">
+                  Python • FastF1 • Pandas • Telemetry • Data Analysis
+                </p>
+              </a>
+
               <a
                 href="https://github.com/dhan-patil/f1a-formula1-analytics"
                 target="_blank"
@@ -231,21 +244,6 @@ export default function Home() {
                   SwiftUI • REST APIs • Data Visualization
                 </p>
               </a>
-              <a
-                href="https://github.com/dhan-patil/trackdelta-f1-telemetry"
-                target="_blank"
-                className="group block rounded-3xl border border-slate-800/70 bg-slate-900/30 p-7 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-900/50"
-              >
-                <h4 className="text-xl font-semibold text-slate-100 transition-colors duration-300 group-hover:text-[#4063D8]">
-                  TrackDelta
-                </h4>
-                <p className="mt-3 leading-7 text-slate-400">
-                  Python-based telemetry analysis project that processes Formula 1 lap data to compare drivers, evaluate performance, and generate race insights.
-                </p>
-                <p className="mt-4 text-sm text-slate-500">
-                  Python • FastF1 • Pandas • Telemetry • Data Analysis
-                </p>
-              </a>
             </div>
           </section>
 
@@ -255,7 +253,7 @@ export default function Home() {
             </h3>
 
             <p className="max-w-lg text-slate-400 leading-8">
-              I'm actively seeking Data Analyst and Data Engineering opportunities. If you'd like to discuss analytics, motorsport data, or potential collaborations, I'd love to connect.
+              I am actively seeking Data Analyst and Data Engineering opportunities. If you would like to discuss analytics, motorsport data, or potential collaborations, I would love to connect.
             </p>
 
             <div className="mt-10">
