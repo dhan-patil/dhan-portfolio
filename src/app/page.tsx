@@ -65,10 +65,12 @@ export default function Home() {
               Dhan Patil.
             </h1>
 
+            <p className="mt-4 text-xl font-semibold text-slate-200">
+              Data Analyst & Data Engineering Enthusiast
+            </p>
+
             <p className="mt-6 max-w-md text-base leading-7 text-slate-400">
-              Aspiring software developer passionate about motorsport
-              analytics, iOS/macOS experiences, telemetry systems, and
-              building data-driven applications with clean user experiences.
+              Building data pipelines, analytics solutions, and Formula 1 data platforms using Python, SQL, PostgreSQL, and REST APIs.
             </p>
 
             <nav className="mt-16 hidden lg:block">
@@ -175,23 +177,19 @@ export default function Home() {
 
             <div className="space-y-6 text-slate-400 leading-8">
               <p className="max-w-2xl text-base leading-8 text-slate-300">
-                I build Formula 1 analytics & performance software.
-              </p>
-              <p>
-                I enjoy building software that combines data, interaction,
-                and performance-focused experiences.
+                I'm a BCA graduate focused on Data Analytics and Data Engineering, building practical projects that transform raw data into meaningful insights.
               </p>
 
               <p>
-                My interest lies in motorsport analytics, telemetry systems,
-                and creating products that make complex Formula 1 data easier
-                to understand.
+                My work centers around Python, SQL, PostgreSQL, REST APIs, and ETL pipelines. I enjoy designing databases, collecting data from APIs, transforming datasets, and creating analytical workflows.
               </p>
 
               <p>
-                Currently, I am focused on building Formula 1-related
-                software experiences like F1A and F1TL while continuing to
-                expand my skills across modern software development.
+                Formula 1 provides the perfect playground for applying these skills. My projects explore race strategy, telemetry, performance analysis, and historical racing data using modern data engineering practices.
+              </p>
+
+              <p>
+                I'm currently expanding my expertise in PostgreSQL, Power BI, advanced SQL, and scalable data pipelines while preparing for Data Analyst and Data Engineering opportunities.
               </p>
             </div>
           </section>
@@ -211,13 +209,10 @@ export default function Home() {
                   F1A
                 </h4>
                 <p className="mt-3 leading-7 text-slate-400">
-                  Formula 1 race performance insights and telemetry analysis
-                  software focused on understanding why one driver performed
-                  better than another through race context, replay systems,
-                  and analytical workflows.
+                  Formula 1 analytics platform that combines telemetry, race data, and performance metrics to compare drivers and uncover racing insights through data visualization and analytical workflows.
                 </p>
                 <p className="mt-4 text-sm text-slate-500">
-                  SwiftUI • Swift • Xcode • APIs
+                  SwiftUI • Python • SQL • REST APIs • Telemetry Analysis
                 </p>
               </a>
 
@@ -230,12 +225,10 @@ export default function Home() {
                   F1TL
                 </h4>
                 <p className="mt-3 leading-7 text-slate-400">
-                  A Formula 1 historical timeline application for iOS that
-                  allows users to explore season progression, standings, and
-                  race-by-race championship changes.
+                  Historical Formula 1 data explorer that visualizes seasons, championship standings, and race progression using structured API data.
                 </p>
                 <p className="mt-4 text-sm text-slate-500">
-                  SwiftUI • Swift • REST API
+                  SwiftUI • REST APIs • Data Visualization
                 </p>
               </a>
               <a
@@ -247,12 +240,10 @@ export default function Home() {
                   TrackDelta
                 </h4>
                 <p className="mt-3 leading-7 text-slate-400">
-                  A Python-based Formula 1 telemetry analysis project focused on race
-                  performance insights, lap comparisons, and understanding driver
-                  performance through telemetry and data-driven analysis.
+                  Python-based telemetry analysis project that processes Formula 1 lap data to compare drivers, evaluate performance, and generate race insights.
                 </p>
                 <p className="mt-4 text-sm text-slate-500">
-                  Python • FastF1 • Telemetry Analysis • Data Visualization
+                  Python • FastF1 • Pandas • Telemetry • Data Analysis
                 </p>
               </a>
             </div>
@@ -264,8 +255,7 @@ export default function Home() {
             </h3>
 
             <p className="max-w-lg text-slate-400 leading-8">
-              Interested in collaborating, discussing Formula 1 analytics,
-              or working together? Feel free to reach out.
+              I'm actively seeking Data Analyst and Data Engineering opportunities. If you'd like to discuss analytics, motorsport data, or potential collaborations, I'd love to connect.
             </p>
 
             <div className="mt-10">
